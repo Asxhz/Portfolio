@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashmit Sethi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Ashmit Sethi</a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#leadership" class="nav-link">Leadership</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Ashmit Sethi</h1>
+                    <p class="hero-subtitle">Applied Math & Data Science Student</p>
+                    <p class="hero-description">
+                        Passionate about machine learning, AI research, and building innovative solutions. 
+                        Currently pursuing my B.A. at UC Berkeley with a focus on data science and applied mathematics.
+                    </p>
+                    <div class="hero-links">
+                        <a href="mailto:ashmit@berkeley.edu" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-code"></i> View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="me.png" alt="Ashmit Sethi" class="profile-photo" style="width:300px; height:300px; border-radius:50%; object-fit:cover; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a dedicated student at UC Berkeley pursuing a B.A. in Applied Math and Data Science. 
+                            My passion lies in machine learning research, AI development, and creating impactful solutions 
+                            that bridge the gap between theoretical knowledge and real-world applications.
+                        </p>
+                        <p>
+                            With experience in both academic research and practical implementation, I've worked on 
+                            projects ranging from LLM research in medical domains to fairness-aware machine learning 
+                            systems. I believe in the power of technology to solve complex problems and improve lives.
+                        </p>
+                    </div>
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Programming Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">HTML5/CSS</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Machine Learning</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">TensorFlow</span>
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">NumPy</span>
+                                    <span class="skill-tag">Pandas</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Frameworks</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Jupyter</span>
+                                    <span class="skill-tag">OpenCV</span>
+                                    <span class="skill-tag">Matplotlib</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>University of California, Berkeley</h3>
+                        <span class="education-date"></span>
+                    </div>
+                    <p class="education-degree">B.A. Applied Math and Data Science</p>
+                    <div class="courses">
+                        <h4>Relevant Coursework:</h4>
+                        <ul>
+                            <li>Structure and Interpretation of Computer Programs</li>
+                            <li>Foundations of Data Science</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Machine Learning Research Assistant</h3>
+                                <span class="timeline-company">Indiana University, Bloomington</span>
+                                <span class="timeline-date">Aug. 2024 - Nov. 2024</span>
+                            </div>
+                            <p class="timeline-location">San Jose, CA</p>
+                            <ul class="timeline-description">
+                                <li>Supported LLM research in the medical domain under Professor Da Yan and Ph.D. student Saugat Adhikari by annotating several hundred data samples for training and evaluation tasks.</li>
+                                <li>Assisted with simple PyTorch model training workflows, including dataset loading and basic model evaluation for NLP-related tasks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Machine Learning Research Assistant</h3>
+                                <span class="timeline-company">University of Texas, San Antonio</span>
+                                <span class="timeline-date">May. 2024 - Jul. 2024</span>
+                            </div>
+                            <p class="timeline-location">San Jose, CA</p>
+                            <ul class="timeline-description">
+                                <li>Conducted research under the CAREAI cohort with Professor Ke Yang and Ph.D. Jason Johnson, focusing on counterfactual generation to improve classifier fairness and enhance model interpretability.</li>
+                                <li>Collaborated on implementing and testing Python-based ML models, analyzing the fairness impact across multiple datasets using a range of standard fairness metrics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>DataPulse - AI-Powered Information Dashboard</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">AI Agents</span>
+                                <span class="tech-tag">BrightData</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            A comprehensive real-time dashboard that aggregates crypto, stocks, weather, and news data with intelligent AI agents that analyze market movements and provide insights.
+                        </p>
+                        <ul class="project-features">
+                            <li>Built 5 AI agents using BrightData API to automatically research and explain stock price movements</li>
+                            <li>Real-time data aggregation from multiple APIs with Redis caching for optimal performance</li>
+                            <li>Responsive React frontend with dark mode and mobile-first design</li>
+                            <li>FastAPI backend with automated CI/CD pipeline deployed on Render</li>
+                            <li>Live demo: <a href="https://data-pulse-xvft.vercel.app/" target="_blank" style="color: var(--primary-color);">data-pulse-xvft.vercel.app</a></li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Fitness Tracker with AI Pose Estimation</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">MediaPipe</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">CNN</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Built an AI-powered fitness tracker using MediaPipe, OpenCV, and convolutional neural networks (CNNs) to analyze joint angles.
+                        </p>
+                        <ul class="project-features">
+                            <li>Achieved 95% accuracy in detecting proper exercise form through pose estimation and real-time analysis</li>
+                            <li>Used NumPy for fast data processing and automated repetition counting</li>
+                            <li>Delivered instant performance feedback to users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="leadership">
+            <div class="container">
+                <h2 class="section-title">Leadership & Impact</h2>
+                <div class="leadership-grid">
+                    <div class="leadership-card">
+                        <div class="leadership-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Founder - HowToHackathon</h3>
+                        <span class="leadership-period">May. 2023 - May. 2025</span>
+                        <ul class="leadership-achievements">
+                            <li>Founded and led 25+ global hackathons and olympiads with 25,000+ participants</li>
+                            <li>Awarded $2.5M+ in prizes, fostering large-scale technical innovation</li>
+                            <li>Built partnerships with 10+ industry leaders (Wolfram, Postman, Desmos)</li>
+                            <li>Connected 100+ judges from companies like Meta, Google, and Nvidia</li>
+                            <li>Managed technical operations and a 20+ person team</li>
+                        </ul>
+                    </div>
+                    <div class="leadership-card">
+                        <div class="leadership-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>President - DevFinTech</h3>
+                        <span class="leadership-period">Dec. 2022 - May. 2025</span>
+                        <ul class="leadership-achievements">
+                            <li>Co-founded and led an organization with 100+ global chapters</li>
+                            <li>Educated 5,000+ students through hands-on FinTech courses</li>
+                            <li>Spearheaded events in stock market simulations and cryptocurrency trading</li>
+                            <li>Expanded access to FinTech and computing education globally</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards">
+            <div class="container">
+                <h2 class="section-title">Awards & Recognition</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <i class="fas fa-medal"></i>
+                        <span>AP Scholar</span>
+                    </div>
+                    <div class="award-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Academic D Block</span>
+                    </div>
+                    <div class="award-item">
+                        <i class="fas fa-star"></i>
+                        <span>PVSA Gold</span>
+                    </div>
+                    <div class="award-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Hackathon Winner (1st)</span>
+                    </div>
+                    <div class="award-item">
+                        <i class="fas fa-list"></i>
+                        <span>CIF President's List</span>
+                    </div>
+                    <div class="award-item">
+                        <i class="fas fa-code"></i>
+                        <span>USACO Gold</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        I'm always interested in discussing new opportunities, research collaborations, 
+                        or just having a conversation about technology and innovation.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:ashmit@berkeley.edu" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>ashmit@berkeley.edu</span>
+                        </a>
+                        <a href="https://github.com/Asxhz" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/Asxhz</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ashmitsethi" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/ashmitsethi</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ashmit Sethi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
