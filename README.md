@@ -1,6 +1,6 @@
 # Ashmit Sethi - Portfolio Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript, inspired by the Point theme. This static site showcases my experience in machine learning research, leadership roles, and technical projects.
+A modern, responsive portfolio website built with HTML, CSS, and JavaScript, inspired by the Point theme. This static site showcases my experience in software engineering, machine learning research, GenAI development, leadership roles, and award-winning technical projects.
 
 ## Features
 
@@ -13,33 +13,13 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript, ins
 ## Sections
 
 - **Hero**: Introduction and call-to-action
-- **About**: Personal background and technical skills
-- **Education**: UC Berkeley academic information
-- **Experience**: Research assistant positions
-- **Projects**: Featured technical projects
+- **About**: Personal background and comprehensive technical skills (Programming Languages, ML & GenAI, Frontend & Backend, Tools & Cloud)
+- **Education**: UC Berkeley academic information with expected graduation date and coursework
+- **Experience**: Software Engineering Intern position and Machine Learning Research Assistant roles
+- **Projects**: Featured technical projects including hackathon winners (Multimodal Agentic AI Desktop Operator, Computer Vision Gym Tracker, AI Image Authenticity Detector, DataPulse)
 - **Leadership**: HowToHackathon and DevFinTech roles
-- **Awards**: Academic and competitive achievements
-- **Contact**: Multiple ways to get in touch
-
-## Deployment on GitHub Pages
-
-1. **Push to GitHub**:
-   ```bash
-   git add .
-   git commit -m "Initial portfolio website"
-   git push origin main
-   ```
-
-2. **Enable GitHub Pages**:
-   - Go to your repository settings
-   - Scroll to "Pages" section
-   - Select "Deploy from a branch"
-   - Choose "main" branch and "/ (root)" folder
-   - Click "Save"
-
-3. **Access Your Site**:
-   - Your site will be available at: `https://yourusername.github.io/Portfolio-1`
-   - It may take a few minutes to deploy
+- **Awards**: Academic and competitive achievements (PVSA Gold, USACO Gold, 2x Hackathon Winner)
+- **Contact**: Email, phone number, GitHub, and LinkedIn
 
 ## Customization
 
@@ -53,25 +33,14 @@ Edit the CSS variables in `styles.css`:
 }
 ```
 
-### Content
-- Update personal information in `index.html`
-- Modify the hero section description
-- Add or remove projects, experience, or skills
-- Update contact information
-
-### Styling
-- All styles are in `styles.css`
-- Uses CSS Grid and Flexbox for layouts
-- Responsive breakpoints at 768px and 480px
-- Smooth transitions and hover effects
-
 ## File Structure
 
 ```
-Portfolio-1/
+Portfolio/
 ├── index.html          # Main HTML file
 ├── styles.css          # All CSS styles
 ├── script.js           # JavaScript functionality
+├── me.png              # Profile photo
 └── README.md           # This file
 ```
 
@@ -79,9 +48,16 @@ Portfolio-1/
 
 - **HTML5**: Semantic markup
 - **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
-- **JavaScript**: Interactive features and animations
+- **JavaScript**: Interactive features, animations, and smooth scrolling
 - **Font Awesome**: Icons
 - **Google Fonts**: Inter font family
+
+## Key Highlights
+
+- **Software Engineering**: Experience with RAG pipelines, MCP integration, and HIPAA-compliant healthcare applications
+- **Machine Learning**: Research in LLMs, fairness-aware ML, computer vision, and GenAI
+- **Projects**: Hackathon winner at Cal Hacks 12.0 and Tri Valley Hackathon
+- **Leadership**: Founded HowToHackathon (25,000+ participants) and co-founded DevFinTech (100+ global chapters)
 
 ## Browser Support
 
