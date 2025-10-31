@@ -299,16 +299,32 @@ section {
 }
 
 .skills-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.skill-category {
+    background-color: var(--bg-primary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.skill-category:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 .skill-category h4 {
     font-size: var(--font-size-base);
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .skill-tags {
@@ -807,6 +823,10 @@ section {
     
     .projects-grid,
     .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
         grid-template-columns: 1fr;
     }
     

@@ -31,31 +31,41 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links with better offset calculation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
         if (target) {
-            const offsetTop = target.offsetTop - 70; // Account for fixed navbar
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = targetPosition - navbarHeight - 10;
+            
             window.scrollTo({
-                top: offsetTop,
+                top: offsetPosition,
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// Active navigation link highlighting
+// Active navigation link highlighting with improved accuracy
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
 function highlightNavLink() {
     let current = '';
+    const scrollPosition = window.scrollY + 150; // Account for navbar and offset
+    
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        const sectionBottom = sectionTop + sectionHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             current = section.getAttribute('id');
         }
     });
@@ -68,19 +78,43 @@ function highlightNavLink() {
     });
 }
 
-window.addEventListener('scroll', highlightNavLink);
-
-// Navbar background on scroll
+// Combined scroll handler for better performance
+let ticking = false;
 const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+
+function onScroll() {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            // Handle nav link highlighting
+            highlightNavLink();
+            
+            // Handle navbar background
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+            
+            // Handle scroll to top button
+            const scrollToTopBtn = document.querySelector('button[style*="position: fixed"]');
+            if (scrollToTopBtn) {
+                if (scrollTop > 300) {
+                    scrollToTopBtn.style.opacity = '1';
+                } else {
+                    scrollToTopBtn.style.opacity = '0';
+                }
+            }
+            
+            ticking = false;
+        });
+        ticking = true;
     }
-});
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -136,14 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Removed parallax effect for better scroll performance
 
 // Skill tags hover effect
 document.addEventListener('DOMContentLoaded', () => {
@@ -276,14 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.body.appendChild(scrollToTopBtn);
     
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.opacity = '1';
-        } else {
-            scrollToTopBtn.style.opacity = '0';
-        }
-    });
+    // Scroll to top button visibility is handled in the combined scroll handler
     
     scrollToTopBtn.addEventListener('click', scrollToTop);
 });
@@ -301,10 +321,4 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(() => {
-    highlightNavLink();
-    // Other scroll-related functions
-}, 10);
-
-window.addEventListener('scroll', debouncedScrollHandler);
+// Navbar scroll handler is now integrated into the combined scroll handler above
